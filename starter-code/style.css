@@ -4,7 +4,7 @@ from Unit 1 - 5 below  */
 	
 .board {
 	display: inline-block;
-	height: 80%;
+	height: 50%;
 	width: 50%;	
 }
 .card {
@@ -28,6 +28,12 @@ h2 {
 
 .name {
 	color: #ff0000;
+}
+img {
+	height: 200px;
+	width: 150px;
+	border: 1px;
+	border-radius: 10px;
 }
 
 nav {
