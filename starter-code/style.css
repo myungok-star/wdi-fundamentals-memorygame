@@ -1,10 +1,11 @@
-/* This is a multi-line
+/*/* This is a multi-line
 comment. Add your CSS code
 from Unit 1 - 5 below  */
+	
 .board {
 	display: inline-block;
-	height: 50%;
-	width: 50%;		
+	height: 80%;
+	width: 50%;	
 }
 .card {
 	height: 200px;
@@ -16,6 +17,7 @@ from Unit 1 - 5 below  */
     background-color: #ffff00;
     margin: 8%;	
     float: left;
+    
 }
 h1 {
 	color: rgb(2, 132, 130);
@@ -57,4 +59,8 @@ body {
 
 footer {
 	background-color: #808080;
-}
+	text-align: center;
+
+
+
+
