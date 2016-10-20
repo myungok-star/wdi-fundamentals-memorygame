@@ -19,7 +19,7 @@ var board = document.getElementById('game-board');
 // function that creates cards
 var createCards = function() {
 	// loop all 4 cards to create card elements for the board
-	for (var i = 0; i< cards.length; i++) {
+	for (var i = 0; i < cards.length; i++) {
 		//create a div element which will be used as a card
 		var cardElement = document.createElement('div');
 		// add a class the card elements 
@@ -30,6 +30,7 @@ var createCards = function() {
 		cardElement.addEventListener('click', isTwoCards);
 		// append the card element to the board
 		board.appendChild(cardElement);
+		board.appendChild(cardElement);
 	}
 }
 //checks to see if there are cards in play
@@ -39,24 +40,23 @@ var isTwoCards = function() {
   // for now, just know it gives you access to the card the user clicked on
   cardsInPlay.push(this.getAttribute('data-card'));
   
-
-
-  // if you have two cards in play check for a match
-  if (cardsInPlay.length === 2) {
-  	// pass the cardsInPlay as an argument to isMatch function
-    isMatch(cardsInPlay);
+	// show the card's image
+	console.log(this.getAttribute('data-card'));
 	if (this.getAttribute('data-card') === 'king') {
 		this.innerHTML = '<img src = "k1.png">';
 	} else {
 		this.innerHTML = '<img src = "q1.png">';
 	}
-
+  // if you have two cards in play check for a match
+  if (cardsInPlay.length === 2) {
+  	// pass the cardsInPlay as an argument to isMatch function
+    isMatch(cardsInPlay);
     // clear cards in play array for next try
     cardsInPlay = [];
 
   }
 	 
-  }
+ }
 
 var isMatch = function(cards) {
 	if (cards[0] === cards[1]) {
